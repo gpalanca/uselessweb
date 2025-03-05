@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Useful Website</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="text-center">
+            <h1>TAKE ME</h1>
+            <h2>TO ANOTHER</h2>
+            <h1>USEFUL</h1>
+            <h1>WEBSITE</h1>
+            <button id="randomButton" onclick="openRandomWebsite()">PLEASE</button>
+
+            <script>
+              function openRandomWebsite() {
+                const websites = [
+                  'banana.html',
+                  'letter.html',
+                  'stupidpassword.html',
+                  'lucky.html',
+                  'button.html',
+                  'cmyk.html',
+                  'clock.html'
+                ];
+          
+                const randomIndex = Math.floor(Math.random() * websites.length);
+          
+                window.open(websites[randomIndex], '_blank');
+              }
+            </script>
+        </div>
+    </body>
+</html>

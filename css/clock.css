@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+}
+
+#clock{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 20%;
+    font-size: 60pt;
+}
+
+#clock:hover{
+    color: red;
+}
+

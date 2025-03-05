@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>What time is it?</title>
+        <link rel="stylesheet" href="css/clock.css">
+    </head>
+    <body>
+        <div id="clock"> 
+
+            <span id="hours"></span>:
+          
+            <span id="minutes"></span>:
+          
+            <span id="seconds"></span>
+          
+          </div>
+          
+
+          
+          <script> function displayTime() {
+
+            let date = new Date(); 
+          
+            let hours = date.getHours();
+          
+            let minutes = date.getMinutes();
+          
+            let seconds = date.getSeconds();
+        
+          
+            hours = (hours < 10 ? '0' : '') + hours;
+          
+            minutes = (minutes < 10 ? '0' : '') + minutes;
+          
+            seconds = (seconds < 10 ? '0' : '') + seconds;
+          
+            
+          
+            document.getElementById('hours').textContent = hours;
+          
+            document.getElementById('minutes').textContent = minutes;
+          
+            document.getElementById('seconds').textContent = seconds;
+          
+          }
+          
+          setInterval(displayTime, 1000);
+        </script>
+    </body>
+</html>
