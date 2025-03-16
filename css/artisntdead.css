@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(255, 194, 194);
+}
+
+img{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 5%;
+    width: 600px;
+    padding: none;
+}
+
+img:hover{
+    cursor: pointer;
+    opacity: 60%;
+}

@@ -54,3 +54,25 @@ p{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+#hiddenButton{
+    color:rgb(216, 216, 216);
+    background-color: white;
+}
+
+a:link{
+    text-decoration: none;
+    color:black;
+}
+a:visited{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    text-decoration: none;
+    color:black;
+    cursor: pointer;
+}
+a:active{
+    text-decoration: none;
+    color:black;
+}

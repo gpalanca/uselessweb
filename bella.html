@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bella.css">
+    </head>
+    <body>
+        <img id="image" src="img/IMG_0488.jpg" alt="Random Image">
+        <br>
+        <button onclick="changeImage()">I want to see the baby</button>
+    
+        <script>
+            const images = [
+                'img/IMG_0799.jpg',
+                'img/IMG_0861.jpg',
+                'img/IMG_2161.jpg',
+                'img/IMG_0488.jpg',
+                'img/IMG_0259 2.jpg',
+                'img/IMG_1075.jpg',
+                'img/IMG_1792 2.jpg',
+                'img/IMG_1925 2 (1).jpg',
+                'img/IMG_4601.jpg',
+                'img/IMG_7022.jpg'
+            ];
+    
+            let currentImageIndex = 0;
+    
+            function changeImage() {
+                currentImageIndex++;
+                if (currentImageIndex >= images.length) {
+                    currentImageIndex = 0;
+                }
+    
+                const imageElement = document.getElementById('image');
+                imageElement.src = images[currentImageIndex];
+            }
+        </script>
+    </body>
+</html>
