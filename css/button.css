@@ -1,9 +1,10 @@
-body{
-    background-color: aliceblue;
+body {
     display: flex;
     justify-content: center;
-    align-items:center;
-    margin-top: 10%;
+    align-items: center;
+    min-height: 100vh; 
+    margin: 0; 
+    background-image: url('../img/dollywoodbackground.jpg');
 }
 
 h2{
@@ -11,8 +12,8 @@ h2{
 }
 
 #Button{
-    background-color: lightpink;
-    color: black;
+    background-color: rgb(237, 46, 151);
+    color: rgb(255, 255, 255);
     border-color: aliceblue;
     border-width: 1px;
     cursor: pointer;
