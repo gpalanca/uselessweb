@@ -1,17 +1,20 @@
 body{
     background-color: black;
+    overflow: hidden;
+    
 }
 
-#clock{
+#clock {
+    position: absolute;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    margin-top: 20%;
-    font-size: 60pt;
-}
+    font-size: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    white-space: nowrap;
+  }
 
 #clock:hover{
-    color: red;
+    color: rgb(255, 0, 242);
 }
 

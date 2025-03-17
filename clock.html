@@ -24,34 +24,56 @@
           
 
           
-          <script> function displayTime() {
-
-            let date = new Date(); 
-          
-            let hours = date.getHours();
-          
-            let minutes = date.getMinutes();
-          
-            let seconds = date.getSeconds();
+          <script>
+            // CLOCK FUNCTION
+            function displayTime() {
+              let date = new Date();
+              let hours = date.getHours();
+              let minutes = date.getMinutes();
+              let seconds = date.getSeconds();
         
-          
-            hours = (hours < 10 ? '0' : '') + hours;
-          
-            minutes = (minutes < 10 ? '0' : '') + minutes;
-          
-            seconds = (seconds < 10 ? '0' : '') + seconds;
-          
-            
-          
-            document.getElementById('hours').textContent = hours;
-          
-            document.getElementById('minutes').textContent = minutes;
-          
-            document.getElementById('seconds').textContent = seconds;
-          
-          }
-          
-          setInterval(displayTime, 1000);
-        </script>
+              hours = (hours < 10 ? '0' : '') + hours;
+              minutes = (minutes < 10 ? '0' : '') + minutes;
+              seconds = (seconds < 10 ? '0' : '') + seconds;
+        
+              document.getElementById('hours').textContent = hours;
+              document.getElementById('minutes').textContent = minutes;
+              document.getElementById('seconds').textContent = seconds;
+            }
+        
+            setInterval(displayTime, 1000);
+            displayTime(); // Call immediately
+        
+            // BOUNCING FUNCTION
+            const clock = document.getElementById("clock");
+            clock.style.position = "absolute"; // Important for movement!
+        
+            let posX = 100;
+            let posY = 100;
+            let velX = 2;
+            let velY = 2;
+        
+            function moveClock() {
+              posX += velX;
+              posY += velY;
+        
+              // Bounce off walls
+              if (posX + clock.offsetWidth >= window.innerWidth || posX <= 0) {
+                velX = -velX;
+              }
+              if (posY + clock.offsetHeight >= window.innerHeight || posY <= 0) {
+                velY = -velY;
+              }
+        
+              clock.style.left = posX + "px";
+              clock.style.top = posY + "px";
+            }
+        
+            function animate() {
+              moveClock();
+              requestAnimationFrame(animate);
+            }
+            animate();
+          </script>
     </body>
 </html>

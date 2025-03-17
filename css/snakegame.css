@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #222;
+  }
+  
+  canvas {
+    background-color: #111;
+    border: 2px solid #fff;
+  }
+
+  #restartButton {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: lime;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; 
+  }

@@ -1,57 +1,42 @@
-body{
+body {
     margin: auto;
     text-align: center;
     width: auto;
     margin-top: 10%;
-}
+    transition: background-color 0.5s ease;
+  }
 
-h1{
+  h1 {
     font-size: 100pt;
-}
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
 
-section{
+  section {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap:10px;
+    grid-column-gap: 10px;
     grid-auto-flow: dense;
-}
+  }
 
-#cyan{
+  #cyan {
     grid-column: 1 / span 3;
-}
+  }
 
-#cyan:hover{
-    background-color: cyan;
-    transform: scale(1.2);
-    color: aliceblue;
-}
-
-#magenta{
+  #magenta {
     grid-column: 4 / span 3;
-}
+  }
 
-#magenta:hover{
-    background-color: magenta;
-    transform: scale(1.2);
-    color: aliceblue;
-}
-
-#yellow{
+  #yellow {
     grid-column: 7 / span 3;
-}
+  }
 
-#yellow:hover{
-    background-color: yellow;
-    transform: scale(1.2);
-    color: aliceblue;
-}
-
-#black{
+  #black {
     grid-column: 10 / span 3;
-}
+  }
 
-#black:hover{
-    background-color: black;
+  /* Optional hover scaling effect */
+  h1:hover {
     transform: scale(1.2);
     color: aliceblue;
-}
+  }

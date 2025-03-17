@@ -11,12 +11,50 @@
         <title>CMYK</title>
         <link rel="stylesheet" href="css/cmyk.css">
     </head>
-    <body>
-      <section>
-        <h1 id="cyan">C</h1>
-        <h1 id="magenta">M</h1>
-        <h1 id="yellow">Y</h1>
-        <h1 id="black">K</h1>
-      </section>
-    </body>
+
+  <body>
+    <section>
+      <h1 id="cyan">C</h1>
+      <h1 id="magenta">M</h1>
+      <h1 id="yellow">Y</h1>
+      <h1 id="black">K</h1>
+    </section>
+  
+    <script>
+      const body = document.body;
+  
+      const cyan = document.getElementById("cyan");
+      const magenta = document.getElementById("magenta");
+      const yellow = document.getElementById("yellow");
+      const black = document.getElementById("black");
+  
+      cyan.addEventListener("mouseenter", () => {
+        body.style.backgroundColor = "cyan";
+      });
+      cyan.addEventListener("mouseleave", () => {
+        body.style.backgroundColor = "white";
+      });
+  
+      magenta.addEventListener("mouseenter", () => {
+        body.style.backgroundColor = "magenta";
+      });
+      magenta.addEventListener("mouseleave", () => {
+        body.style.backgroundColor = "white";
+      });
+  
+      yellow.addEventListener("mouseenter", () => {
+        body.style.backgroundColor = "yellow";
+      });
+      yellow.addEventListener("mouseleave", () => {
+        body.style.backgroundColor = "white";
+      });
+  
+      black.addEventListener("mouseenter", () => {
+        body.style.backgroundColor = "black";
+      });
+      black.addEventListener("mouseleave", () => {
+        body.style.backgroundColor = "white";
+      });
+    </script>
+  </body>
 </html>
