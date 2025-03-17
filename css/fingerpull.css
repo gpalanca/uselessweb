@@ -6,6 +6,6 @@ body{
     overflow: hidden;
 }
 
-img{
-    
+img:hover{
+    cursor: pointer;
 }
