@@ -2,19 +2,45 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; 
-    margin: 0; 
+    flex-direction: column; 
+    min-height: 100vh;
+    margin: 0;
     background-image: url('../img/dollywoodbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: brightness(0.9); 
+    text-align: center;
 }
 
-h2{
+h2 {
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
 }
 
-#Button{
+h2:hover {
+    transform: scale(1.1);
+}
+
+#Button {
     background-color: rgb(237, 46, 151);
-    color: rgb(255, 255, 255);
-    border-color: aliceblue;
-    border-width: 1px;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16pt;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#Button:hover {
+    background-color: rgb(200, 30, 120);
+    transform: scale(1.05);
 }

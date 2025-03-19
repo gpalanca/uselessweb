@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>WARNING</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/warning.css">
+    </head>
+    <body>
+        
+        <script>
+            function showWarning() {
+  // Create a new div
+  const warning = document.createElement('div');
+  warning.textContent = "⚠️ WARNING! Unexpected catastrophic failure! Please investigate, then set device on fire.";
+  warning.style.position = 'fixed';
+  warning.style.top = Math.random() * (window.innerHeight - 100) + 'px';
+  warning.style.left = Math.random() * (window.innerWidth - 200) + 'px';
+  warning.style.padding = '20px';
+  warning.style.backgroundColor = 'white';
+  warning.style.color = 'black';
+  warning.style.fontSize = '16px';
+  warning.style.zIndex = '1000';
+  warning.style.border = '2px solid red';
+  warning.style.boxShadow = '0px 0px 10px black';
+  
+  // Add a close button
+  const closeButton = document.createElement('button');
+  closeButton.textContent = 'X';
+  closeButton.style.marginLeft = '10px';
+  closeButton.style.cursor = 'pointer';
+  
+  // On click, remove the div and show another warning
+  closeButton.addEventListener('click', () => {
+    document.body.removeChild(warning);
+    showWarning(); // Recursive call: show another warning!
+  });
+  
+  warning.appendChild(closeButton);
+  document.body.appendChild(warning);
+}
+
+// Start with the first warning
+showWarning();
+        </script>
+    </body>
+</html>

@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #222;
+    background-color: #f8f8f8;
   }
   
   canvas {
@@ -17,9 +17,10 @@ body {
     margin-left: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: lime;
+    background-color: rgb(230, 230, 230);
+    border-color: #111;
+    border-radius: 1pt;
     color: black;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     display: none; 

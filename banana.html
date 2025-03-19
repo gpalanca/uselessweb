@@ -19,6 +19,42 @@
         <img id="banana4" src="img/banana.png" alt="banana logo">
         <img id="banana5" src="img/banana.png" alt="banana logo">
         <img id="banana6" src="img/banana.png" alt="banana logo">
-
+        <script>
+            const bananas = document.querySelectorAll('img');
+            const velocities = [];
+          
+            // Assign random starting positions and velocities
+            bananas.forEach(banana => {
+              banana.style.left = Math.random() * window.innerWidth + 'px';
+              banana.style.top = Math.random() * window.innerHeight + 'px';
+              velocities.push({
+                velX: (Math.random() * 4) - 2,
+                velY: (Math.random() * 4) - 2
+              });
+            });
+          
+            function moveBananas() {
+              bananas.forEach((banana, i) => {
+                let rect = banana.getBoundingClientRect();
+                let posX = rect.left + velocities[i].velX;
+                let posY = rect.top + velocities[i].velY;
+          
+                // Bounce off edges
+                if (posX <= 0 || posX + banana.width >= window.innerWidth) {
+                  velocities[i].velX *= -1;
+                }
+                if (posY <= 0 || posY + banana.height >= window.innerHeight) {
+                  velocities[i].velY *= -1;
+                }
+          
+                banana.style.left = posX + 'px';
+                banana.style.top = posY + 'px';
+              });
+          
+              requestAnimationFrame(moveBananas);
+            }
+          
+            moveBananas();
+          </script>
     </body>
 </html>
