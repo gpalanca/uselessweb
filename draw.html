@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Draw!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/draw.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    </head>
+    <body>
+        <button id="clearButton" style="position: absolute; top: 10px; left: 10px; padding: 10px 20px; font-size: 16px; z-index: 10;">
+            Clear Canvas
+        </button>
+
+        <script>
+            function setup() {
+                createCanvas(windowWidth, windowHeight);
+                background(255);
+                strokeWeight(10);
+                colorMode(HSB);
+                describe('A blank canvas where the user draws by dragging the mouse');
+
+                // Attach event listener to button
+                document.getElementById('clearButton').addEventListener('click', clearCanvas);
+            }
+
+            function mouseDragged() {
+                let lineHue = mouseX - mouseY;
+                stroke(lineHue, 90, 90);
+                line(pmouseX, pmouseY, mouseX, mouseY);
+            }
+
+            function clearCanvas() {
+                background(255); // Clears the canvas by setting it back to white
+            }
+        </script>
+    </body>
+</html>

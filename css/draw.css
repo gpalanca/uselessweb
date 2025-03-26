@@ -1,0 +1,18 @@
+body{
+    background-color: white;
+}
+#clearButton {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #77b2ff, #c4dafa);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
